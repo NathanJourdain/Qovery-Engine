@@ -16,6 +16,7 @@ body{
 
 section{
     height: 100vh;
+    min-height: 1000px;
     font-family: Arial, Helvetica, sans-serif;
 
 }
@@ -29,7 +30,7 @@ section{
 
 .contenu{
     border : 2px solid transparent;
-    width: 1300px;
+    max-width: 1300px;
     margin:  0 auto;
 }
 
@@ -42,12 +43,16 @@ section{
 .acceuil .container{
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-around;
+ 
     
 }
 
 .acceuil .container-left{
     width: 40%;
+}
+.acceuil .container-right img{
+    width: 100%;
 }
 
 .acceuil .container-left h1{
@@ -164,7 +169,10 @@ section{
     grid-gap: 5% ;
 
 }
+.grid .contenu div{
 
+    max-width: 500px;
+}
 .grid .contenu div h1{
     font-weight: bold;
     font-size: 24px;
@@ -204,4 +212,45 @@ footer{
     width: 100%;
     height: 200px;
     background: #151B2B;
+}
+
+
+
+
+
+
+/*  scrolltrigger */
+
+section:not(.acceuil){
+    opacity: 0;
+}
+
+
+
+
+
+/* responsive */
+
+@media screen and (max-width : 1100px) {
+    section{
+        height: auto;
+    }
+
+    .acceuil .container{
+        flex-direction: column;
+    }
+
+    .how-work img{
+        width: 80%;
+    }
+
+    .usage img{
+        width: 80%;
+    }
+
+    .grid .contenu{
+        grid-template-columns: repeat(1, 1fr);
+        
+    }
+
 }
