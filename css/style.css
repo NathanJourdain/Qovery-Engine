@@ -253,4 +253,8 @@ section:not(.acceuil){
         
     }
 
+    .text-footer{
+        margin-top: 300px;
+    }
+
 }
